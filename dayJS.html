@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lesson 15 Exercises</title>
+  </head>
+  <body>
+    <script type="module">
+      import dayjs from 'https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js';
+      import isSatSun from './scripts/dayJS.js';
+      
+
+      const today = dayjs();
+      const reqDay = today.add(5, 'days');
+      console.log(reqDay.format('MMMM D'));
+      console.log(reqDay.format('dddd'));
+
+      const reqNextMonth =  today.add(1, 'month');
+      console.log(reqNextMonth.format('MMMM D'));
+      console.log(reqNextMonth.format('dddd'));
+
+      const reqPrevMonth = today.subtract(1, 'month');
+      console.log(reqPrevMonth.format('MMMM D'));
+      console.log(reqPrevMonth.format('dddd'));
+
+      console.log(today.format('dddd'));
+
+      isSatSun(today);
+      isSatSun(reqDay);
+      isSatSun(reqNextMonth);
+      isSatSun(reqPrevMonth);
+    </script>
+  </body>
+</html>
